@@ -1,110 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Page Title</title>
-    <meta name="description" content="Roughly 155 characters">
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <!DOCTYPE html>
 <html>
 <head>
 <style>
-body {background-color: #632828;}
-h1   {color: white;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+   color: white;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
     text-align: center;
-   font-size: 35px;
-    font-family: cursive;
-  }
-p    {color: white;}
-img { height: 600px; width: 600px
-    margin: 25%;}
+    background: black;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #b8bdc4;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: grey;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
 </style>
 </head>
 <body>
-  </head>
-  <body>
-    <!-- Content -->           
-    <div class="w3-content" style="max-width: 1400px;"><!-- Header --><header class="w3-container w3-center w3-padding-32">
-<h1><b>Medicine</b></h1>
-<p>Welcome to the blog of <span class="w3-tag">a future medical career</span></p>
-</header><!-- Grid -->
-<div class="w3-row"><!-- Blog entries -->
-<div class="w3-col l8 s12"><!-- Blog entry -->
-<div class="w3-card-4 w3-margin w3-white"><img src="https://i.pinimg.com/564x/98/d8/42/98d84281fbc03d8e1c5de7424f2494d5.jpg" alt="description" height="" width="300" />
-<div class="w3-container">
-<h3><b>Emernecy Medicine</b></h3>
-<h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-</div>
-<div class="w3-container">
-<p>paragraph.</p>
-<div class="w3-row">
-<div class="w3-col m8 s12">
-</div>
-<div class="w3-col m4 w3-hide-small">
-</div>
-</div>
-</div>
-</div>
-<hr /><!-- Blog entry -->
-<div class="w3-container">
-<h3><b>BLOG ENTRY</b></h3>
-<h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
-</div>
-<div class="w3-container">
-<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-<div class="w3-row">
-<div class="w3-col m8 s12">
-</div>
-<div class="w3-col m4 w3-hide-small">
-</div>
-</div>
-</div>
-</div>
-<!-- END BLOG ENTRIES --></div>
-<!-- Introduction menu -->
-<div class="w3-col l4"><!-- About Card -->
-<div class="w3-card w3-margin w3-margin-top"><img src="/w3images/avatar_g.jpg" style="width: 100%;" />
-<div class="w3-container w3-white">
-<h4><b>My Name</b></h4>
-<p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
-</div>
-</div>
-<hr /><!-- Posts -->
-<div class="w3-card w3-margin">
-<div class="w3-container w3-padding">
-<h4>Popular Posts</h4>
-</div>
-<ul class="w3-ul w3-hoverable w3-white">
-<li class="w3-padding-16"><img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width: 50px;" /> <span class="w3-large">Lorem</span><br /> <span>Sed mattis nunc</span></li>
-<li class="w3-padding-16"><img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width: 50px;" /> <span class="w3-large">Ipsum</span><br /> <span>Praes tinci sed</span></li>
-<li class="w3-padding-16"><img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width: 50px;" /> <span class="w3-large">Dorum</span><br /> <span>Ultricies congue</span></li>
-<li class="w3-padding-16 w3-hide-medium w3-hide-small"><img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width: 50px;" /> <span class="w3-large">Mingsum</span><br /> <span>Lorem ipsum dipsum</span></li>
-</ul>
-</div>
-<hr /><!-- Labels / tags -->
-<div class="w3-card w3-margin">
-<div class="w3-container w3-padding">
-<h4>Tags</h4>
-</div>
-<div class="w3-container w3-white">
 
+<div class="header">
+  <h1>Medicine</h1>
+  <p>My iinspiration to become a doctor.</p>
 </div>
+
+<div class="topnav">
+  <a href="#/">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
 </div>
-<!-- END Introduction Menu --></div>
-<!-- END GRID --></div>
-<br /> <!-- END w3-content --></div>
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top"><button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button> <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next &raquo;</button>
-<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel="noopener">w3.css</a></p>
-</footer>
-  
- 
-    
-    
-    
-    
-     
-  </body>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+     <p><img src="https://78.media.tumblr.com/4cc1c82dd04576e2ff4436dcafc947dc/tumblr_ojxc4mKxgr1vga5s1o5_400.gif" alt="description" width="600" height="300" /></p>
+      <p>Romantic Doctor Teacher Kim</p>
+      <p>A Korean Drama that gave me the ideo of becoming a surgeon, although most TV shows aren't really realistic I still get really excited to go into surgery one day and save someone's life. </p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <p><img src="https://i2.wp.com/www.deliajumma.com/wp-content/uploads/2017/01/47.gif?resize=540%2C250" width="600" height="300" /></p>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
 </html>
-
